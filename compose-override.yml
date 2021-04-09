@@ -1,0 +1,10 @@
+services:
+  homebridge:
+    ports:
+      - 8084:8080
+  telegraf:
+    depends_on:
+      - cadvisor-arm
+      - node-exporter
+      - influxdb
+      - mosquitto
